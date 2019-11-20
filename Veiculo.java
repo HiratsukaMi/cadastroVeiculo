@@ -2,84 +2,85 @@ package TiposVeiculos;
 
 public abstract class Veiculo {
 
-	private static String nome;
-	private static String marca;
-	private static String cor;
-	private static String placa;
-	private static int numP;
-	private static int numR;
+	private String nome;
+	private String marca;
+	private String cor;
+	private String placa;
+	private int numP;
+	private int numR;
 	//private int i;
-	private static String proprietario;
+	private String proprietario;
 	
 	public Veiculo() {
 		
-		Veiculo.nome = "";
-		Veiculo.marca = "";
-		Veiculo.cor = "";
-		Veiculo.placa = "";
-		Veiculo.numP = 0;
-		Veiculo.numR = 0;
-		Veiculo.proprietario = "";
+		
+		this.nome = "";
+		this.marca = "";
+		this.cor = "";
+		this.placa = "";
+		this.numP = 0;
+		this.numR = 0;
+		this.proprietario = "";
 		
 	}
 	
-	public static String getNome () {
+	public String getNome () {
 		return nome;
 		
 	}
 	
-	public static void setNome (String nome) {
+	public void setNome (String nome) {
 		
-		Veiculo.nome = nome;
+		this.nome = nome;
 		
 	}
 	
-	public static String getMarca () {
+	public String getMarca () {
 		
 		return marca;
 		
 	}
 	
-	public static void setMarca (String marca) {
+	public void setMarca (String marca) {
 		
-		Veiculo.marca = marca;
+		this.marca = marca;
 		
 	}
 	
-	public static String getCor () {
+	public String getCor () {
 		
 		return cor;
 		
 	}
 	
-	public static void setCor (String cor) {
+	public void setCor (String cor) {
 		
-		Veiculo.cor = cor;
+		this.cor = cor;
 		
 	}
 	
-	public static String getPlaca() {
+	public String getPlaca() {
 		return placa;
 	}
 
-	public static void setPlaca(String placa) {
-		Veiculo.placa = placa;
+	public void setPlaca(String placa) {
+		this.placa = placa;
 	}
 
-	public static int getNumP() {
+	public int getNumP() {
 		return numP;
 	}
 
-	public static void setNumP(int numP) {
-		Veiculo.numP = numP;
+	public void setNumP(int numP) {
+		this.numP = numP;
 	}
 
-	public static int getNumR() {
+	public int getNumR() {
 		return numR;
 	}
 
-	public static void setNumR(int numR) {
-		Veiculo.numR = numR;
+	public void setNumR(int numR) {
+		this.numR = numR;
 	}
 	
 	/*public int getI() {
@@ -90,15 +91,15 @@ public abstract class Veiculo {
 		this.i = i;
 	}*/
 	
-	public static String getProprietario () {
+	public String getProprietario () {
 		
 		return proprietario;
 		
 	}
 	
-	public static void setProprietario (String proprietario) {
+	public void setProprietario (String proprietario) {
 		
-		Veiculo.proprietario = proprietario;
+		this.proprietario = proprietario;
 		
 	}
 

@@ -1,9 +1,9 @@
 package TiposVeiculos;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Scanner;
 
-import Principal.Menu;
+//import Principal.Menu;
 
 public class Barco extends Veiculo {
 	
@@ -55,8 +55,6 @@ public class Barco extends Veiculo {
 	}
 	
 	public void inserirB() {
-		
-		while (true) {
 			
 			System.out.println("Deseja fazer inserção de dados?");
 			System.out.println("1 - Sim         2 - Não");
@@ -65,91 +63,49 @@ public class Barco extends Veiculo {
 			if (conf == 1) {
 				
 				System.out.println ("\nDigite o nome do barco: ");
-				Barco.setNome(ler.nextLine());
+				setNome(ler.nextLine());
 				
 				System.out.println ("Digite a marca do barco: ");
-				Barco.setMarca(ler.nextLine());
+				setMarca(ler.nextLine());
 				
 				System.out.println ("Digite a cor do barco: ");
-				Barco.setCor(ler.nextLine());
+				setCor(ler.nextLine());
 				
 				System.out.println ("Digite o número de portas do barco: ");
-				Barco.setNumP(lerInt());
+				setNumP(lerInt());
 				
 				System.out.println ("Digite o nome do proprietário: ");
-				Barco.setProprietario(ler.nextLine() + "\n");
+				setProprietario(ler.nextLine() + "\n");
 				
 			}
 			
 			else if (conf == 2) {
 				
 				System.out.println("\nVV Retornando ao Menu VV\n");
-				break;
 
 			}
 			
 			else {
 				
 				System.out.println("\n!! Opção Inválida !!\n");
-				break;
 
 			}
-			
-		}
 		
 	}
 
 	public void imprimirB () {
 		
-		//t = barcos.size();
-		
 		System.out.println("\nOs dados gravados no momento são: \n");
-		
-		//for (i = 0; i < t; i++) {
 			
-			System.out.println("Nome: " + Barco.getNome());
-			System.out.println("Marca: " + Barco.getMarca());
-			System.out.println("Cor: " + Barco.getCor());
-			System.out.println("Número de portas: " + Barco.getNumP());
-			System.out.println("Proprietário: " + Barco.getProprietario() + "\n");
-			
-		//}
+		System.out.println("Nome: " + getNome());
+		System.out.println("Marca: " + getMarca());
+		System.out.println("Cor: " + getCor());
+		System.out.println("Número de portas: " + getNumP());
+		System.out.println("Proprietário: " + getProprietario() + "\n");
 	
 	}
 	
-	/*public void excluirB() {
-		
-		//t = barcos.size();
-		
-		//for (i = 0; i < t; i++) {
-		
-			System.out.println("Deseja excluir os dados?\n");
-			System.out.println("1 - Sim         2 - Não");
-			conf = ler.nextInt();
-		
-			if (conf == 1) {
-				
-				System.out.println("Digite o índice que deseja excluir: ");
-				i = ler.nextInt();
-				Barco.
-			
-			}
-			else if (conf == 2) {
-			
-				System.out.println("\nVV Retornando ao Menu VV\n");
-			
-			}
-			else {
-			
-				System.out.println("\n!! Opção Inválida !!\n");
-			
-			}
-			
-		//}
-		
-	}*/
-	
-	public void alterarB() {
+	/*public void alterarB() {
 	 
 		//t = barcos.size();
 		
@@ -163,22 +119,22 @@ public class Barco extends Veiculo {
 			System.out.println("Digite o índice que deseja alterar: ");
 			i = lerInt();
 			
-			for (i = 0; i < t; i++) {
+			if () {
 				
 				System.out.println ("\nDigite o nome do barco: ");
-				Barco.setNome(ler.nextLine());
+				setNome(ler.nextLine());
 				
 				System.out.println ("Digite a marca do barco: ");
-				Barco.setMarca(ler.nextLine());
+				setMarca(ler.nextLine());
 				
 				System.out.println ("Digite a cor do barco: ");
-				Barco.setCor(ler.nextLine());
+				setCor(ler.nextLine());
 				
 				System.out.println ("Digite o número de portas do barco: ");
-				Barco.setNumP(lerInt());
+				setNumP(lerInt());
 				
 				System.out.println ("Digite o nome do proprietário: ");
-				Barco.setProprietario(ler.nextLine() + "\n");
+				setProprietario(ler.nextLine() + "\n");
 				
 			}
 			
@@ -195,6 +151,6 @@ public class Barco extends Veiculo {
 			
 		}
 		
-	}
+	}*/
 
 }
