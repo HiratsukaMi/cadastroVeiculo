@@ -1,14 +1,13 @@
 package TiposVeiculos;
 
+import java.util.Scanner;
+
 public abstract class Veiculo {
 
 	private String nome;
 	private String marca;
 	private String cor;
 	private String placa;
-	private int numP;
-	private int numR;
-	//private int i;
 	private String proprietario;
 	
 	public Veiculo() {
@@ -18,11 +17,11 @@ public abstract class Veiculo {
 		this.marca = "";
 		this.cor = "";
 		this.placa = "";
-		this.numP = 0;
-		this.numR = 0;
 		this.proprietario = "";
 		
 	}
+	
+	static Scanner ler = new Scanner(System.in);
 	
 	public String getNome () {
 		return nome;
@@ -66,30 +65,6 @@ public abstract class Veiculo {
 	public void setPlaca(String placa) {
 		this.placa = placa;
 	}
-
-	public int getNumP() {
-		return numP;
-	}
-
-	public void setNumP(int numP) {
-		this.numP = numP;
-	}
-
-	public int getNumR() {
-		return numR;
-	}
-
-	public void setNumR(int numR) {
-		this.numR = numR;
-	}
-	
-	/*public int getI() {
-		return i;
-	}
-
-	public void setI(int i) {
-		this.i = i;
-	}*/
 	
 	public String getProprietario () {
 		
@@ -100,6 +75,35 @@ public abstract class Veiculo {
 	public void setProprietario (String proprietario) {
 		
 		this.proprietario = proprietario;
+		
+	}
+	
+	public void inserirV() {
+		
+		System.out.println ("\nDigite o nome do carro:");
+		setNome(ler.nextLine());
+		
+		System.out.println ("Digite a marca do carro: ");
+		setMarca(ler.nextLine());
+		
+		System.out.println ("Digite a cor do carro: ");
+		setCor(ler.nextLine());
+		
+		System.out.println ("Digite a placa do carro: ");
+		setPlaca(ler.nextLine());
+		
+		System.out.println ("Digite o nome do proprietário: ");
+		setProprietario(ler.nextLine() + "\n");
+		
+	}
+	
+	public void imprimirV() {
+		
+		System.out.println("Nome: " + getNome());
+		System.out.println("Marca: " + getMarca());
+		System.out.println("Cor: " + getCor());
+		System.out.println("Placa: " + getPlaca());
+		System.out.println("Proprietário: " + getProprietario() + "\n");
 		
 	}
 

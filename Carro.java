@@ -8,11 +8,50 @@ public class Carro extends Veiculo {
 	
 	public Carro () {
 		
+		this.numP = 0;
+		this.numR = 0;
+		
 	}
 	
 	Menu m = new Menu();
-	int conf;
 	static Scanner ler = new Scanner(System.in);
+	
+	private int conf;
+	private int i;
+	private int numR;
+	private int numP;
+
+	public int getConf() {
+		return conf;
+	}
+
+	public void setConf(int conf) {
+		this.conf = conf;
+	}
+	
+	public int getI() {
+		return i;
+	}
+
+	public void setI(int i) {
+		this.i = i;
+	}
+	
+	public int getNumR() {
+		return numR;
+	}
+
+	public void setNumR(int numR) {
+		this.numR = numR;
+	}
+	
+	public int getNumP() {
+		return numP;
+	}
+
+	public void setNumP(int numP) {
+		this.numP = numP;
+	}
 	
 	private static int lerInt() {
 	    String digitado = "";
@@ -25,105 +64,44 @@ public class Carro extends Veiculo {
 	
 	public void inserirC () {
 		
-		System.out.println ("\nDigite o nome do carro:");
-		setNome(ler.nextLine());
+		System.out.println("\nDeseja fazer inserção de dados?");
+		System.out.println("1 - Sim         2 - Não");
+		conf = lerInt();
 		
-		System.out.println ("Digite a marca do carro: ");
-		setMarca(ler.nextLine());
+		if (conf == 1) {
+			
+			inserirV();
+			
+			System.out.println ("Digite o número de portas do carro: ");
+			setNumP(lerInt());
+			
+			System.out.println ("Digite o número de rodas: ");
+			setNumR(lerInt());
+			
+		}
 		
-		System.out.println ("Digite a cor do carro: ");
-		setCor(ler.nextLine());
+		else if (conf == 2) {
+			
+			System.out.println("\nVV Retornando ao Menu VV\n");
+
+		}
 		
-		System.out.println ("Digite a placa do carro: ");
-		setPlaca(ler.nextLine());
-		
-		System.out.println ("Digite o número de portas do carro: ");
-		setNumP(lerInt());
-		
-		System.out.println ("Digite o número de rodas: ");
-		setNumR(lerInt());
-		
-		System.out.println ("Digite o nome do proprietário: ");
-		setProprietario(ler.nextLine() + "\n");
+		else {
+			
+			System.out.println("\n!! Opção Inválida !!\n");
+
+		}
 		
 	}
 	
 	public void imprimirC () {
 		
+		System.out.println("=====================================================");
 		System.out.println("\nOs dados gravados no momento são: \n");
-		System.out.println("Nome: " + getNome());
-		System.out.println("Marca: " + getMarca());
-		System.out.println("Cor: " + getCor());
-		System.out.println("Placa: " + getPlaca());
+		imprimirV();
 		System.out.println("Número de portas: " + getNumP());
 		System.out.println("Número de rodas: " + getNumR());
-		System.out.println("Proprietário: " + getProprietario() + "\n");
-		
-	}
-	
-	public void excluirC() {
-		
-		System.out.println("Deseja excluir os dados?\n");
-		System.out.println("1 - Sim         2 - Não");
-		conf = ler.nextInt();
-		
-		if (conf == 1) {
-			
-			System.out.println("Nome: ");
-			setNome(" ");
-			System.out.println("Marca: ");
-			setMarca(" ");
-			System.out.println("Cor: ");
-			setCor(" ");
-			System.out.println("Placa: ");
-			setPlaca(" ");
-			System.out.println("Número de portas: ");
-			setNumP(0);
-			System.out.println("Número de rodas: ");
-			setNumR(0);
-			System.out.println("Proprietário: ");
-			setProprietario(" ");
-			System.out.println("!! Dados deletados !!\n");
-			
-			m.menuPrincipal();
-			
-		}
-		else if (conf == 2) {
-			
-			System.out.println("\nVV Retornando ao Menu VV\n");
-			
-		}
-		else {
-			
-			System.out.println("\n!! Opção Inválida !!\n");
-			
-		}
-		
-	}
-	
-	public void alterarC() {
-		
-		System.out.println("Deseja fazer alterações nos dados?");
-		System.out.println("1 - Sim         2 - Não");
-		conf = ler.nextInt();
-		
-		//Primeiro if = escolhe se quer fazer alterações em todos os dados ou em um específico.
-		if (conf == 1) {
-			
-			inserirC();
-			
-		}
-		else if (conf == 2) {
-			
-			System.out.println("\nVV Retornando ao Menu VV\n");
-				
-		}
-		
-		else {
-			
-			System.out.println("\n!! Opção Inválida !!\n");
-			
-		}
+		System.out.println("=====================================================");
 		
 	}
 	
