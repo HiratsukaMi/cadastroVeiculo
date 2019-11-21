@@ -13,7 +13,7 @@ public class Menu {
 		
 	}
 	
-	public void setOp (int op) {
+	public void setOp(int op) {
 		
 		this.op = op;
 		
@@ -35,16 +35,15 @@ public class Menu {
 	
 	public int menuInterno() {
 		
+		System.out.println("=====================================================");
 		System.out.println("\n//* Digite a ação que deseja realizar: *//\n");
 		System.out.println("1 - Inserção;;");
 		System.out.println("2 - Impressão;;");
-		System.out.println("3 - Alteração");
-		System.out.println("4 - Exclusão;;");
-		System.out.println("5 - Encerrar;;");
+		System.out.println("3 - Exclusão;;");
+		System.out.println("4 - Encerrar;;");
 		op = ler.nextInt();
 		
 		return op;
-		
 		
 	}
 
